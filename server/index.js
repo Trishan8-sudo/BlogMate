@@ -21,7 +21,9 @@ app.use(cookieParser()) // needed for parsing cookie into json objects
 const allowedOrigins = [
   process.env.CLIENT_URL,
   process.env.FRONTEND_URL,
-].filter(Boolean)
+]
+  .filter(Boolean)
+  .map((url) => url.replace(/\/+$/, ''))
 
 app.use(
   cors({

@@ -43,6 +43,9 @@ pids/
 *.pid.lock
 temp/
 tmp/
+*.png
+!client/public/**
+!client/src/**
 
 # Testing and coverage
 coverage/
