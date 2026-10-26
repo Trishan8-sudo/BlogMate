@@ -23,7 +23,8 @@ const isAuthenticated = async (req, res, next) => {
       })
     }
 
-    const decoded = jwt.verify(token, process.env.jwt_secret)
+    const secret = process.env.jwt_secret || process.env.JWT_SECRET
+    const decoded = jwt.verify(token, secret)
     const userId = decoded.userId
     const user = await UserModel.findById(userId)
 
@@ -48,7 +49,8 @@ export const optionalAuth = async (req, res, next) => {
   try {
     const token = extractToken(req)
     if (token) {
-      const decoded = jwt.verify(token, process.env.jwt_secret)
+      const secret = process.env.jwt_secret || process.env.JWT_SECRET
+      const decoded = jwt.verify(token, secret)
       const user = await UserModel.findById(decoded.userId)
       if (user) {
         req.user = user
