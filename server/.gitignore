@@ -1,4 +1,57 @@
+# Dependencies
 node_modules/
+
+# Environment variables & secrets
 .env
+.env.*
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+!.env.template
+
+# Logs
+logs/
+*.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build outputs
+dist/
+build/
+
+# Runtime and temp files
+pids/
+*.pid
+*.seed
+*.pid.lock
+.npm/
+.eslintcache
+temp/
+tmp/
+
+# Testing and coverage
+coverage/
+.nyc_output/
+
+# Editor and IDE configurations
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.sublime-*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
