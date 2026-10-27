@@ -4,6 +4,34 @@
 
 ---
 
+## 🌐 Live Deployment & Important Notice
+
+| Service | Live URL | Hosting Platform | Status |
+| :--- | :--- | :--- | :--- |
+| **Backend API** | [https://blogmate-ihzs.onrender.com](https://blogmate-ihzs.onrender.com) | Render | Active |
+| **Frontend App** | [https://blog-mate-client.onrender.com](https://blog-mate-client.onrender.com) | Render | Active |
+
+> [!CAUTION]
+> ### ⚠️ Crucial Step: Wake Up the Backend First!
+> The backend server is hosted on **Render's free tier**, which **spins down (enters sleep mode) after 15 minutes of inactivity**.
+> 
+> When the backend is asleep, initial requests will take **45–60 seconds** to boot up. If you open the frontend first, API calls (such as fetching articles or authenticating) will fail or time out.
+>
+> #### 📋 Recommended Steps to Test the Live Application:
+> 1. **Step 1 — Open the Backend Link First**:
+>    👉 **[https://blogmate-ihzs.onrender.com](https://blogmate-ihzs.onrender.com)** (or the [Health Check](https://blogmate-ihzs.onrender.com/health))
+> 2. **Step 2 — Wait for the Server to Wake Up**:
+>    Allow approximately **40–60 seconds** for Render to spin up the container until you see the confirmation message:
+>    ```
+>    Welcome to BlogMate API 📝
+>    ```
+> 3. **Step 3 — Open the Frontend App**:
+>    👉 **[https://blog-mate-client.onrender.com](https://blog-mate-client.onrender.com)**
+>
+> 💡 *Tip: If you opened the frontend first and posts are not loading or login fails, simply visit the backend URL in a new tab, wait for the response, and then refresh the frontend page.*
+
+---
+
 ## 🌟 Features
 
 - **Authentication & Security**:
